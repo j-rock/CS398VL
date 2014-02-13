@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %title Viz Lit
+    %link(rel="stylesheet" href="/styles.css")
+    %link(rel="stylesheet" href="/styles2.css")
+    %link(rel="stylesheet" href="/styles3.css")
+  %body
+    %div{:class => "header"}
+      %div{:class => "home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed"}
+        %a{:class => "pure-menu-heading", :href => "http://www.github.com/j-rock"} Joseph >>= Rock
+        %ul
+          %li{:class => "pure-menu-selected"}
+            %a{:href => "/"} Home
+          %li{:class => "pure-menu"}
+            %a{:href => "/mp1"} MP1
+    %div
+      =yield
+
+    %div{:class => "content-wrapper"}
+      %div{:class => "footer l-box is-center"} UIUC CS398 VizLit Work
+
+    %script{:src => "http://code.jquery.com/jquery-1.10.1.js"}
+    %script{:src => "http://d3js.org/d3.v3.js", :charset => "utf-8"}
+    %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore.js"}
+    %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"}
+    %script{:type => "text/javascript", :src => "/src/#{jsscript}/index.js"}
+    %script{:type => "text/javascript"}
+      main();
