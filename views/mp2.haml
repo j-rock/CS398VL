@@ -1,0 +1,53 @@
+%div{:class => "content"}
+  %div{:class => "container"}
+    :css
+      circle.node {
+        cursor: pointer;
+        stroke: #000;
+        stroke-width: .5px;
+      }
+
+      circle.node.directory {
+        stroke: #9ecae1;
+        stroke-width: 2px;
+      }
+
+      circle.node.collapsed {
+        stroke: #555;
+      }
+
+      .nodetext {
+        fill: #252929;
+        font-weight: bold;
+        text-shadow: 0 0 0.2em white;
+      }
+
+      line.link {
+        fill: none;
+        stroke: #9ecae1;
+        stroke-width: 1.5px;
+      }
+
+    %div{:class => "splash-container"}
+      %div{:class => "splash"}
+        %h1{:class => "splash-head"} MP2
+        %p{:class => "splash-subhead"}
+          %form{:class => "form-inline"}
+            %fieldset
+              %label Pick a chapter:
+              %select{:id => "project"}
+                %option{:value => "/src/mp2/data1.json"} Chapter 1
+                %option{:value => "/src/mp2/data2.json"} Chapter 2
+                %option{:value => "/src/mp2/data3.json"} Chapter 3
+          %form{:class => "pure-hidden-desktop pure-hidden-tablet pure-hidden-phone", :id => "jsonInput"}
+            %fieldset
+              %textarea{:id => "jsonData"}
+              %div
+                %button{:type => "submit"} Update
+    %div{:class => "content-wrapper"}
+      %div{:class => "content"}
+        %div{:id => "visualization"}
+
+    %script{:type => "text/javascript", :src => "/src/mp2/js/d3/d3.js"}
+    %script{:type => "text/javascript", :src => "/src/mp2/js/d3/d3.geom.js"}
+    %script{:type => "text/javascript", :src => "/src/mp2/js/d3/d3.layout.js"}

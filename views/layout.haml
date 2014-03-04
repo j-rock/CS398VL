@@ -14,6 +14,8 @@
             %a{:href => "/"} Home
           %li{:class => "pure-menu"}
             %a{:href => "/mp1"} MP1
+          %li{:class => "pure-menu"}
+            %a{:href => "/mp2"} MP2
     %div
       =yield
 
@@ -21,9 +23,10 @@
       %div{:class => "footer l-box is-center"} UIUC CS398 VizLit Work
 
     %script{:src => "http://code.jquery.com/jquery-1.10.1.js"}
-    %script{:src => "http://d3js.org/d3.v3.js", :charset => "utf-8"}
-    %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore.js"}
-    %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"}
     %script{:type => "text/javascript", :src => "/src/#{jsscript}/index.js"}
     %script{:type => "text/javascript"}
       main();
+
+
+
+

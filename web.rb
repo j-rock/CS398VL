@@ -8,17 +8,21 @@ def render_me(page_view, script='none')
   haml page_view, :format => :html5, :locals => {:jsscript => script}
 end
 
+def render_mp(n)
+  mpn = "mp#{n}"
+  render_me mpn.to_sym, mpn
+end
+
 get '/' do
   render_me :home, 'none'
 end
 
 get '/mp1' do
-  render_me :mp, 'mp1'
+  render_mp 1
 end
 
-get '/error' do
-  status 404
-  render_me :wut
+get '/mp2' do
+  render_mp 2
 end
 
 error do
