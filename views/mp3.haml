@@ -1,0 +1,30 @@
+%div{:class => "content"}
+  %div{:class => "container"}
+    :css
+      .background {
+        fill: #eee;
+      }
+      line {
+        stroke: #fff;
+      }
+      text.active {
+        fill: red;
+      }
+      #padded {
+        padding-left:auto;
+        margin-right:auto;
+      }
+
+    %script{:type => "text/javascript", :src => "/src/mp3/js/d3/d3.min.js"}
+    %div{:class => "splash-container"}
+      %div{:class => "splash"}
+        %h1{:class => "splash-head"} MP3
+        %div{:class => "splash-subhead"} A joint effort between Darwin and Joey
+        %p{:class => "splash-subhead"}
+          %div
+            %select{:id => "order"}
+              %option{:value => "name"} by Name
+              %option{:value => "count"} by Frequency
+    %div{:class => "content-wrapper"}
+      %div{:class => "content", :id => "padded"}
+        %div{:id => "visualization"}

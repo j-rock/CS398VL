@@ -25,6 +25,10 @@ get '/mp2' do
   render_mp 2
 end
 
+get '/mp3' do
+  render_mp 3
+end
+
 error do
   status 400
   render_me :wut

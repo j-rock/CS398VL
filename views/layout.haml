@@ -16,17 +16,17 @@
             %a{:href => "/mp1"} MP1
           %li{:class => "pure-menu"}
             %a{:href => "/mp2"} MP2
+          %li{:class => "pure-menu"}
+            %a{:href => "/mp3"} MP3
     %div
       =yield
 
-    %div{:class => "content-wrapper"}
-      %div{:class => "footer l-box is-center"} UIUC CS398 VizLit Work
 
-    %script{:src => "http://code.jquery.com/jquery-1.10.1.js"}
+    //%script{:src => "http://code.jquery.com/jquery-1.10.1.js"}
     %script{:type => "text/javascript", :src => "/src/#{jsscript}/index.js"}
     %script{:type => "text/javascript"}
       main();
 
-
-
+    %div{:class => "content-wrapper"}
+      %div{:class => "footer l-box is-center"} UIUC CS398 VizLit Work
 
